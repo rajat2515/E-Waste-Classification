@@ -1,0 +1,49 @@
+model:
+  name: "EfficientNetV2B0"
+  input_shape: [224, 224, 3]
+  num_classes: 10
+  weights: "imagenet"
+
+training:
+  batch_size: 32
+  epochs_phase1: 5
+  epochs_phase2: 10
+  learning_rate_phase1: 0.001
+  learning_rate_phase2: 0.0001
+  early_stopping_patience: 5
+  reduce_lr_patience: 3
+  reduce_lr_factor: 0.5
+  
+data:
+  train_split: 0.7
+  val_split: 0.15
+  test_split: 0.15
+  target_size: [224, 224]
+  augmentation:
+    rotation_range: 20
+    width_shift_range: 0.2
+    height_shift_range: 0.2
+    shear_range: 0.2
+    zoom_range: 0.2
+    horizontal_flip: true
+    fill_mode: "nearest"
+
+paths:
+  data_dir: "modified-dataset"
+  processed_dir: "data/processed"
+  augmented_dir: "data/augmented"
+  models_dir: "models/saved_models"
+  checkpoints_dir: "models/checkpoints"
+  logs_dir: "models/logs"
+
+classes:
+  - "Battery"
+  - "Keyboard"
+  - "Microwave"
+  - "Mobile"
+  - "Mouse"
+  - "PCB"
+  - "Player"
+  - "Printer"
+  - "Television"
+  - "Washing Machine" 

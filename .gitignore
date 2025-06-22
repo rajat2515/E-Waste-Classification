@@ -1,0 +1,67 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+ewaste_env/
+venv/
+ENV/
+env/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Model files (large files)
+models/saved_models/*.h5
+models/checkpoints/*.h5
+models/logs/*.png
+models/logs/*.txt
+
+# Data files (large datasets)
+data/processed/
+data/augmented/
+*.jpg
+*.jpeg
+*.png
+*.gif
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+temp_*
+*.tmp
+*.log
+
+# Streamlit
+.streamlit/
+
+# TensorBoard
+logs/
+tensorboard_logs/ 
